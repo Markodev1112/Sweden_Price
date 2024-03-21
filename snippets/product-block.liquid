@@ -57,8 +57,7 @@
   {% if mp4_url != blank %}product-block--video{% endif %}
   {% if product_has_swatches %}product-block--has-swatches{% endif %}
   {{ product_class }}"
-     data-loop-index="{{ i }}"
-     data-product-show = "{{ product.metafields.custom.group }}"
+     data-loop-index="{{ i }}"     
   {% if animate %} data-cc-animate="{{ animation_type }}" data-cc-animate-delay="{{ animate | times: 0.15 }}s" {% endif %}
 
   {% if product.images.size > 1 %}
@@ -208,8 +207,15 @@
       {% endif %}
 
       {% if show_alt_pricing and settings.alternative_pricing_field_list != blank and show_alt_pricing_over_price %}
-        <div class="a price">
-          <span class="theme-money">{%- render "price", product: product, price: cheapest_variant.compare_at_price -%}</span>
+        <div class="a price custom-price">
+          <div class="price-wrapper">
+            {{ product.compare_at_price | money }}
+            <span class="theme-money">{%- render "price", product: product, price: cheapest_variant.compare_at_price -%}</span>
+          </div>
+          <div class="discount-text">
+            <span class="saved-value">{{ product.metafields.custom.saved_value }}</span>
+            <span class="campaign">{{ product.metafields.custom.campaign }}</span>
+          </div>
         </div>
       {% else %}
         <div class="price">
@@ -219,11 +225,13 @@
           {% render 'unit-price', variant: cheapest_variant %}
         </div>
       {% endif %}
+
       {% if show_alt_pricing and settings.alternative_pricing_field_list != blank and show_alt_pricing_over_price == false %}
         <div class="price">
           <span class="theme-money">{%- render "price", product: product, price: cheapest_variant.compare_at_price -%}</span>
         </div>
       {% endif %}
+
     </a>
 
     {% if settings.show_product_block_reviews %}

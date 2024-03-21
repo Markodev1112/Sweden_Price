@@ -44,6 +44,8 @@
   }
 {% endstyle %}
 
+<script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
+
 <div class="product-area
       {% if product.media.size == 1 %}product-area--loner{% endif %}
       {% if section.settings.full_width == false or is_featured_product %} product-area--restrict-width{% endif %}
@@ -357,8 +359,18 @@
 
                 {%- when 'price' -%}
                     {% if block.settings.show_alternative_pricing and settings.alternative_pricing_field_list != blank and block.settings.show_alternative_pricing_over_price %}
-                        <div class="custom-price alt-price-area product-detail__gap-sm" {{ block.shopify_attributes }}>
-                            <div class="price theme-money">{%- render "price", product: product, price: current_variant.compare_at_price -%}</div>
+                        <div class="price custom-product-price custom-price alt-price-area product-detail__gap-sm" {{ block.shopify_attributes }}>
+                            {% comment %} <div class="price theme-money">{%- render "price", product: product, price: current_variant.compare_at_price -%}</div> {% endcomment %}
+                            {% comment %} <div class="a price custom-price"> {% endcomment %}
+                              <div class="price-wrapper">
+                                {{ product.compare_at_price | money }}
+                                <span class="theme-money">{%- render "price", product: product, price: cheapest_variant.compare_at_price -%}</span>
+                              </div>
+                              <div class="discount-text">
+                                <span class="saved-value">{{ product.metafields.custom.saved_value }}</span>
+                                <span class="campaign">{{ product.metafields.custom.campaign }}</span>
+                              </div>
+                            {% comment %} </div> {% endcomment %}
                         </div>
                     {% else %}
                         <div class="price-area product-detail__gap-sm" {{ block.shopify_attributes }}>
