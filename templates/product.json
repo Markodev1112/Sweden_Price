@@ -46,7 +46,6 @@
             "quantity_label": "Stycken",
             "antecedent_label": "Kvm",
             "consequent": "{{ product.metafields.custom.antal_kvm_per_sack.value }}{{ product.metafields.my_fields.antal_plattor_per_kvm.value }}",
-            "consequent_bags": "",
             "show_labels": true,
             "show_tax_and_shipping": true
           }
@@ -97,14 +96,14 @@
       ],
       "settings": {
         "media_style": "collage",
-        "sticky_behaviour": "bottom",
+        "sticky_behaviour": "none",
         "full_width": true,
         "show_backorder_text": true,
         "slide_nav_style": "dots",
         "media_crop": "center",
         "enable_zoom": false,
-        "zoom_cursor": "plus-light",
-        "show_thumbnails": true,
+        "zoom_cursor": "standard",
+        "show_thumbnails": false,
         "enable_video_looping": false,
         "scroll_to_variant_media": true,
         "highlight_selected_media": true,

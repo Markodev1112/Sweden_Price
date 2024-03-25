@@ -12,7 +12,7 @@
     "col_head_featured": "#dd6666",
     "col_head_announcement_bar_bg": "#111111",
     "col_head_announcement_text": "#ffffff",
-    "col_btn": "#ffffff",
+    "col_btn": "#111111",
     "col_btn_bg": "#c4d5a9",
     "col_btn_secondary": "#111111",
     "col_btn_bg_secondary": "#ffffff",
@@ -105,11 +105,11 @@
           "logo_h1": true,
           "show_announcement": true,
           "announcement_home_only": false,
-          "announcement_text": "Vårkänslor !",
+          "announcement_text": "Sten- och markprodukter med snabba leveranser",
           "announcement_text_size": 15,
-          "announcement_badge1": "Dagar öppet köp",
-          "announcement_badge2": "Snabba leveranser",
-          "announcement_badge3": "Handla säkert",
+          "announcement_badge1": "Trygg och säker betalning med",
+          "announcement_badge2": "Kvalité till oslagbara priser",
+          "announcement_badge3": "Leverans med kranbil",
           "announcement_link": "",
           "nav_cart_icon": "basket2",
           "show_country_selector": true,
@@ -203,6 +203,11 @@
       },
       "3824936769257688723": {
         "type": "shopify:\/\/apps\/sami-product-labels-badges\/blocks\/app-embed-block\/b9b44663-5d51-4be1-8104-faedd68da8c5",
+        "disabled": false,
+        "settings": {}
+      },
+      "14288002729265275678": {
+        "type": "shopify:\/\/apps\/go-product-page-gallery-zoom\/blocks\/app-embed\/00e2bd89-9dbb-4f36-8a7f-03768835bc78",
         "disabled": false,
         "settings": {}
       }

@@ -116,7 +116,16 @@
                         {% if product.metafields.custom.pallet_product %}
                             {% for pallet_product in product.metafields.custom.pallet_product.value %}
                                 <div class="pallet-price" data-item="{{pallet_product.title}}">
-                                    <span class="title">{{pallet_product.title}}</span>
+                                    <div class="title-i">
+                                        <span class="title">{{pallet_product.title}}</span>
+                                        <a href="#demo-modal_breaking {{forloop.index}}" class="material-icons {{forloop.index}}">i</a>
+                                        <div id="demo-modal_breaking {{forloop.index}}" class="modal">
+                                        <div class="modal__content ">
+                                            {{pallet_product.description}}
+                                            <a href="#" class="modal__close">×</a>
+                                        </div>
+                                    </div>
+                                    </div>
                                     <span class="aa sub-price-value pallet-value" data-pallet-{{ forloop.index}} ="{{pallet_product.price}}">{{pallet_product.price | divided_by:100 }} kr</span>
                                 </div> 
                             {% endfor %}
