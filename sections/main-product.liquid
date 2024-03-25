@@ -366,11 +366,11 @@
                         </{{ heading_tag }}>
                         <p class="product-size">{{ product.metafields.my_fields.storlek }}</p>
                       </div>
-                      {% if product.metafields.custom.position_image %}
+                      {% if product.metafields.custom.logo_product != blank%}
                         <img src="{{ product.metafields.custom.logo_product | img_url: medium }}" alt="region-image">
                       {% endif %} 
                     </div>
-                  {% endif %}
+                  {% endif %} 
 
                 {%- when 'price' -%}
                     {% if block.settings.show_alternative_pricing and settings.alternative_pricing_field_list != blank and block.settings.show_alternative_pricing_over_price %}
