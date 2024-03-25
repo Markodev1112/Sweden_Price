@@ -202,7 +202,11 @@
       {% if product.metafields.custom.nere_h_ge or product.metafields.custom.position_image %}
         <div class="product-region {% if product.metafields.custom.nere_h_ge %}text{% endif %}">
           {% if product.metafields.custom.position_image %}
-            <img src="{{ product.metafields.custom.position_image | img_url: medium }}" alt="regin-image">
+            <img  srcset="{%- if product.metafields.custom.position_image.width >= 375 -%}{{ product.metafields.custom.position_image | image_url: width: 375 }} 375w,{%- endif -%}
+                          {%- if product.metafields.custom.position_image.width >= 750 -%}{{ product.metafields.custom.position_image | image_url: width: 750 }} 750w,{%- endif -%}
+                          {{ product.metafields.custom.position_image | image_url }} {{product.metafields.custom.position_image.width }}w" 
+                  loading="lazy"
+                  src="{{ product.metafields.custom.position_image | img_url: medium }}" alt="region-image">
           {% endif %}
           {% if product.metafields.custom.nere_h_ge %}
             <span class="region-text">{{ product.metafields.custom.nere_h_ge }}</span>

@@ -42,6 +42,12 @@
       padding-bottom: {{ 1 | divided_by: product.media.first.aspect_ratio | times: 100 }}%;
     }
   }
+  .product-size-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    max-width: 360px;
+  }
 {% endstyle %}
 
 <div class="product-area
@@ -353,10 +359,17 @@
                       endif
                     -%}
                     
-                    <{{ heading_tag }} class="product-area__details__title product-detail__gap-sm h2" {{ block.shopify_attributes }}>
-                      {{ product.title }}
-                    </{{ heading_tag }}>
-                    <p>{{ product.metafields.my_fields.storlek }}</p>
+                    <div class="product-size-logo">
+                      <div class="product-title">
+                        <{{ heading_tag }} class="product-area__details__title product-detail__gap-sm h2" {{ block.shopify_attributes }}>
+                          {{ product.title }}
+                        </{{ heading_tag }}>
+                        <p class="product-size">{{ product.metafields.my_fields.storlek }}</p>
+                      </div>
+                      {% if product.metafields.custom.position_image %}
+                        <img src="{{ product.metafields.custom.logo_product | img_url: medium }}" alt="region-image">
+                      {% endif %} 
+                    </div>
                   {% endif %}
 
                 {%- when 'price' -%}
