@@ -91,7 +91,7 @@
                         {% assign weight = item.product.metafields.my_fields.vikt_per_pall.value %} 
                       {% endif %}
                       
-                      <div class="title" data-quantity="{{ item.quantity }}" data-product-weight="{{ weight }}">
+                      <div class="title" data-quantity="{{ item.quantity }}" data-product-weight="{{ weight }}" >
                         <a data-cc-animate-click href="{{ item.url }}">
                           <span class="product-title">{{ item.product.title }}</span>
                           {% unless item.product.has_only_default_variant %}{{ item.variant.title }}{% endunless %}
@@ -519,7 +519,11 @@
     </div>
 
   </form>
-
+    {% comment %}
+    <div id="shipzip">
+      {% render 'shipzip' %}
+    </div>
+    {% endcomment %}
   {% else %}
 
   <div>

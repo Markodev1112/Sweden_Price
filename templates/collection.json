@@ -14,14 +14,14 @@
         "show_vendor": false,
         "show_alternative_pricing": true,
         "show_alternative_pricing_over_price": true,
-        "show_filter_counts": true,
-        "show_filter_deadends": true,
+        "show_filter_counts": false,
+        "show_filter_deadends": false,
         "ajax_products": true,
         "filter_mode": "none",
         "sticky_sidebar": false,
         "collapse_filters_method": "none",
         "collapse_sort_by": false,
-        "enable_sorting": false,
+        "enable_sorting": true,
         "show_featured_in_sort": false
       }
     },

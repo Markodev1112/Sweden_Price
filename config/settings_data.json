@@ -105,7 +105,7 @@
           "logo_h1": true,
           "show_announcement": true,
           "announcement_home_only": false,
-          "announcement_text": "Sten- och markprodukter med snabba leveranser",
+          "announcement_text": "Din leverantör av sten & trädgårdsprodukter",
           "announcement_text_size": 15,
           "announcement_badge1": "Trygg och säker betalning med",
           "announcement_badge2": "Kvalité till oslagbara priser",
@@ -209,6 +209,11 @@
       "14288002729265275678": {
         "type": "shopify:\/\/apps\/go-product-page-gallery-zoom\/blocks\/app-embed\/00e2bd89-9dbb-4f36-8a7f-03768835bc78",
         "disabled": false,
+        "settings": {}
+      },
+      "4318962865815008709": {
+        "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/boost-sd\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": true,
         "settings": {}
       }
     }

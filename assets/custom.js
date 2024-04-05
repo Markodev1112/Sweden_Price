@@ -550,6 +550,16 @@ function totalWeight() {
         })       
     })
     document.querySelector('.weight-value').innerHTML = (calculatedWei).toFixed(2) + ' kg';
+
+    $.ajax({
+      type: "GET", 
+      url: "/cart?view=shipzip",
+      dataType: "HTML",
+      // Be warned, async: false has been deprecated in jQuery for a long time and is not recommended for use. It's generally recommended to use callbacks or promises instead
+      success: function (s) {
+         $('#shipzip').html(s)
+      },
+    })
 }
 
 //total price

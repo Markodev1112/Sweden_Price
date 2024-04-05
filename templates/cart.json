@@ -4,6 +4,7 @@
       "type": "main-cart",
       "settings": {
         "cart_show_title": true,
+        "cart_backbg": "#f5f5f5",
         "cart_terms_show": false,
         "cart_terms_page": "",
         "continue_shopping_page": "",

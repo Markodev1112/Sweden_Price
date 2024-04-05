@@ -8,6 +8,41 @@
     "theme_support_url": "https:\/\/support.cleancanvas.co.uk\/showcase-theme-support\/"
   },
   {
+    "name": "Shipping",
+    "settings": [
+      {
+        "type": "text",
+        "id": "ship_title",
+        "label": "Shipping section title",
+        "default": "Check Delivery:"
+      },
+      {
+        "type": "text",
+        "id": "ship_placeholder",
+        "label": "Input placeholder text",
+        "default": "Postcode"
+      },
+      {
+        "type": "text",
+        "id": "ship_btn",
+        "label": "Button text",
+        "default": "Check"
+      },
+      {
+        "type": "text",
+        "id": "ship_err",
+        "label": "Error text",
+        "default": "Sorry! Shipping not available for this location."
+      },
+      {
+        "type": "text",
+        "id": "ship_err_req",
+        "label": "Zipcode Error text",
+        "default": "Please enter a valid zipcode"
+      }
+    ]
+  },
+  {
     "name": "Colors",
     "settings": [
       {
